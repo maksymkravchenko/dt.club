@@ -8,28 +8,22 @@
       "version": "1.0.0"
     },
     {
-      "package": "BSON",
-      "reason": null,
-      "repositoryURL": "https://github.com/OpenKitten/BSON.git",
-      "version": "5.0.5"
-    },
-    {
       "package": "Bits",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/bits.git",
       "version": "1.0.0"
     },
     {
+      "package": "CPostgreSQL",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor-community/cpostgresql.git",
+      "version": "2.0.0"
+    },
+    {
       "package": "CTLS",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/ctls.git",
       "version": "1.0.0"
-    },
-    {
-      "package": "Cheetah",
-      "reason": null,
-      "repositoryURL": "https://github.com/OpenKitten/Cheetah.git",
-      "version": "1.0.1"
     },
     {
       "package": "Console",
@@ -50,12 +44,6 @@
       "version": "2.0.0"
     },
     {
-      "package": "CryptoSwift",
-      "reason": null,
-      "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
-      "version": "0.6.9"
-    },
-    {
       "package": "Debugging",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/debugging.git",
@@ -65,49 +53,25 @@
       "package": "Engine",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/engine.git",
-      "version": "2.0.3"
+      "version": "2.0.4"
     },
     {
       "package": "Fluent",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/fluent.git",
-      "version": "2.0.2"
+      "version": "2.0.4"
     },
     {
       "package": "FluentProvider",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/fluent-provider.git",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "package": "JSON",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/json.git",
       "version": "2.0.2"
-    },
-    {
-      "package": "KittenCore",
-      "reason": null,
-      "repositoryURL": "https://github.com/OpenKitten/KittenCore.git",
-      "version": "0.2.3"
-    },
-    {
-      "package": "MongoDriver",
-      "reason": null,
-      "repositoryURL": "https://github.com/vapor/mongo-driver.git",
-      "version": "2.0.0"
-    },
-    {
-      "package": "MongoKitten",
-      "reason": null,
-      "repositoryURL": "https://github.com/OpenKitten/MongoKitten.git",
-      "version": "4.0.7"
-    },
-    {
-      "package": "MongoProvider",
-      "reason": null,
-      "repositoryURL": "https://github.com/vapor/mongo-provider.git",
-      "version": "2.0.0"
     },
     {
       "package": "Multipart",
@@ -119,7 +83,25 @@
       "package": "Node",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/node.git",
+      "version": "2.0.3"
+    },
+    {
+      "package": "PostgreSQL",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor-community/postgresql.git",
       "version": "2.0.1"
+    },
+    {
+      "package": "PostgreSQLDriver",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor/postgresql-driver.git",
+      "version": "2.0.0"
+    },
+    {
+      "package": "PostgreSQLProvider",
+      "reason": null,
+      "repositoryURL": "https://github.com/vapor-community/postgresql-provider.git",
+      "version": "2.0.0"
     },
     {
       "package": "Random",
@@ -140,12 +122,6 @@
       "version": "2.0.0"
     },
     {
-      "package": "Schrodinger",
-      "reason": null,
-      "repositoryURL": "https://github.com/OpenKitten/Schrodinger.git",
-      "version": "1.0.1"
-    },
-    {
       "package": "Sockets",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/sockets.git",
@@ -155,13 +131,13 @@
       "package": "TLS",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/tls.git",
-      "version": "2.0.0"
+      "version": "2.0.4"
     },
     {
       "package": "Vapor",
       "reason": null,
       "repositoryURL": "https://github.com/vapor/vapor.git",
-      "version": "2.0.2"
+      "version": "2.0.7"
     }
   ],
   "version": 1

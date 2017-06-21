@@ -5,8 +5,15 @@ final class EmailController: ResourceRepresentable {
 	
 	
 	func index(request: Request) throws -> ResponseRepresentable {
-		let result = try Email.all().map { try $0.makeJSON() }
-		return JSON(result)
+//		let result = try Email.all().map { try $0.makeJSON() }
+//		return JSON(result)
+		
+		var str = ""
+		try Email.all().forEach {
+			str += $0.email + "\n"
+		}
+		return str
+//		return try Email.all().makeJSON()
 	}
 	
 	func create(request: Request) throws -> ResponseRepresentable {

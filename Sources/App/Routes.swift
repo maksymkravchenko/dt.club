@@ -23,7 +23,6 @@ final class Routes: RouteCollection {
 //        try builder.resource("posts", PostController.self)
 		
 		
-		
 		try builder.resource("emails", EmailController.self)
 
     }

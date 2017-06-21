@@ -1,5 +1,4 @@
 import App
-import MongoKitten
 
 /// We have isolated all of our App's logic into
 /// the App module because it makes our app
@@ -23,26 +22,14 @@ try config.setup()
 let drop = try Droplet(config)
 try drop.setup()
 
-let server = try Server("mongodb://max:design2017@ds157621.mlab.com:57621")
-let db = server["designtalkclub"]
-let todos = db["emails"]
-
-if db.server.isConnected {
-	print("connected")
-} else {
-	print("db fail")
+//routing
+drop.get("form") { req in
+	return try drop.view.make("form.html")
 }
 
-
-let database = server["mydatabasename"]
-
+drop.get("styles") { req in
+	return try drop.view.make("styles/style.css")
+}
 
 try drop.run()
 
-struct Env {
-	static let user = drop.config["app", "user"]!.string!
-	static let password = drop.config["app", "password"]!.string!
-	static let database = drop.config["app", "database"]!.string!
-	static let host = drop.config["app", "host"]!.string!
-	static let port = drop.config["app", "port"]!.string!
-}

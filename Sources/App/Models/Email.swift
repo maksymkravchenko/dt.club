@@ -22,7 +22,7 @@ final class Email: Model {
 	/// Initializes the Post from the
 	/// database row
 	init(row: Row) throws {
-		email = try row.get("content")
+		email = try row.get("email")
 		print(email)
 //		date = try row.get("date")
 	}
@@ -74,7 +74,7 @@ extension Email: JSONConvertible {
 	
 	func makeJSON() throws -> JSON {
 		var json = JSON()
-		try json.set("id", id)
+//		try json.set("id", id)
 		try json.set("email", email)
 		//		try json.set("date", date)
 		return json

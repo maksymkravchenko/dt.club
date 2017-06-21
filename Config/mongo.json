@@ -1,0 +1,8 @@
+{
+	"user": "max",
+	"password": "design2017",
+	"database": "designtalkclub",
+	"port": "57621",
+	"host": "ds157621.mlab.com",
+	"url": "ds157621.mlab.com:57621/designtalkclub"
+}
