@@ -30,18 +30,90 @@
 	</head>
 	<body>
   <section class="subscribe">
-	  <form action="emails" method="get" class="subscribe-form">
-		  <input type="email" name="email" class="subscribe-input" placeholder="Підпишіться на розсилку" autofocus>
-			  <button type="submit" class="subscribe-submit">Subscribe</button>
+	  <form class="subscribe-form">
+		  <input type="emailinput" name="email" class="subscribe-input" placeholder="Підпишіться на розсилку" autofocus >
+			  <button id="emailinput" type="submit" class="subscribe-submit" onclick="post();">Subscribe</button>
 			  </form>
-	  
+	  prepare();
 	  <script type="text/javascript">
-		  post('../email/', {name: 'Johnny Bravo'});
-   
+		 // post('../email/', { email: 'Johnny Bravo'});
+		 
+		 function prepare() {
+			 document.getElementById("clickMe").onclick = post();
+		 }
+		 
+		  function post() {
+			  var xhr = new XMLHttpRequest();
+			  var url = "../email/";
+			  xhr.open("POST", url, true);
+			  xhr.setRequestHeader("Content-type", "application/json");
+			  xhr.onreadystatechange = function () {
+				  if (xhr.readyState === 4 && xhr.status === 200) {
+					  var json = JSON.parse(xhr.responseText);
+					  console.log(json.email + ", " + json.password);
+				  }
+			  };
+			  
+			  var email = document.getElementById('emailinput').value
+			  var data = JSON.stringify({ "email": email });
+			  xhr.send(data);
+		  }
 		  </script>
 
 
-	  
+		<script>
+			
+			function create(htmlStr) {
+				var frag = document.createDocumentFragment(),
+				temp = document.createElement('div');
+				temp.innerHTML = htmlStr;
+				while (temp.firstChild) {
+					frag.appendChild(temp.firstChild);
+				}
+				return frag;
+			}
+		//CORRECT APPROACH BUT FORM CODE NOT WORKING THERE
+		var fragment = create('<div>Hello!</div><p>...</p>');
+		// You can use native DOM methods to insert the fragment:
+		document.body.insertBefore(fragment, document.body.childNodes[0]);
+
+			</script>
+		
+		
+		<script>
+			//ADDS FORM TO HTML PAGE
+			//create a form
+			var f = document.createElement("form");
+			f.setAttribute('method',"post");
+			f.setAttribute('action',"submit.php");
+			
+			//create input element
+			var i = document.createElement("input");
+			i.type = "text";
+			i.name = "user_name";
+			i.id = "user_name1";
+			
+			//create a checkbox
+			var c = document.createElement("input");
+			c.type = "checkbox";
+			c.id = "checkbox1";
+			c.name = "check1";
+			
+			//create a button
+			var s = document.createElement("input");
+			s.type = "submit";
+			s.value = "Submit";
+			
+			// add all elements to the form
+			f.appendChild(i);
+			f.appendChild(c);
+			f.appendChild(s);
+			
+			// add the form inside the body
+			document.getElementsByTagName('body')[0].appendChild(f); //pure javascript
+			
+			</script>
+		
 	  <script type="text/javascript">
 		  function post(path, params, method) {
 			  method = method || "post"; // Set method to post by default if not specified.
@@ -72,4 +144,3 @@
   
 	</body>
 </html>
--->
